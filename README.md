@@ -20,5 +20,5 @@ If the title is omitted, it defaults to `log`. Colours can be applied by using t
 - `e_magenta`
 - `e_cyan`
 - `e_warn` (same as `e_yellow`)
-- `e_error` (same as e_red`)
+- `e_error` (same as `e_red`)
 
