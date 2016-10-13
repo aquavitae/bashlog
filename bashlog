@@ -1,0 +1,73 @@
+#!/bin/bash
+
+# Log a message with a specified colour
+
+_e_log() {
+  case $1 in
+    red)
+      colour="\e[31m"
+      ;;
+    green)
+      colour="\e[32m"
+      ;;
+    yellow)
+      colour="\e[33m"
+      ;;
+    blue)
+      colour="\e[34m"
+      ;;
+    magenta)
+      colour="\e[35m"
+      ;;
+    cyan)
+      colour="\e[36m"
+      ;;
+    default)
+      colour="\e[39m"
+      ;;
+  esac
+  if [ -z $3 ]; then
+    _e_log_title="log"
+    _e_log_message=$2
+  else
+    _e_log_title=$2
+    _e_log_message=$3
+  fi
+  echo -e "$colour\e[1m[$_e_log_title]\e[21m $(date)   $_e_log_message\e[0m"
+}
+
+e_log() {
+  _e_log default $1 $2
+}
+
+e_red() {
+  _e_log red $1 $2
+}
+
+e_green() {
+  _e_log green $1 $2
+}
+
+e_yellow() {
+  _e_log yellow $1 $2
+}
+
+e_blue() {
+  _e_log blue $1 $2
+}
+
+e_magenta() {
+  _e_log magenta $1 $2
+}
+
+e_cyan() {
+  _e_log cyan $1 $2
+}
+
+e_warn() {
+  _e_log yellow $1 $2
+}
+
+e_error() {
+  _e_log red $1 $2
+}
