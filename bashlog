@@ -37,37 +37,37 @@ _e_log() {
 }
 
 e_log() {
-  _e_log default $1 $2
+  _e_log default "$1" "$2"
 }
 
 e_red() {
-  _e_log red $1 $2
+  _e_log red "$1" "$2"
 }
 
 e_green() {
-  _e_log green $1 $2
+  _e_log green "$1" "$2"
 }
 
 e_yellow() {
-  _e_log yellow $1 $2
+  _e_log yellow "$1" "$2"
 }
 
 e_blue() {
-  _e_log blue $1 $2
+  _e_log blue "$1" "$2"
 }
 
 e_magenta() {
-  _e_log magenta $1 $2
+  _e_log magenta "$1" "$2"
 }
 
 e_cyan() {
-  _e_log cyan $1 $2
+  _e_log cyan "$1" "$2"
 }
 
 e_warn() {
-  _e_log yellow $1 $2
+  _e_log yellow "$1" "$2"
 }
 
 e_error() {
-  _e_log red $1 $2
+  _e_log red "$1" "$2"
 }
